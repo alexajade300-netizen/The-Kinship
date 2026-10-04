@@ -107,7 +107,7 @@ export default function HomePage() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#courses"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-200 bg-[#4B0C1B] text-[#F8F2E8] hover:bg-[#8A1F42] shadow-md hover:shadow-lg active:scale-[0.98] focus:ring-2 focus:ring-[#8A1F42] focus:outline-none"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-200 bg-[#F5BF38] text-[#4B0C1B] hover:bg-[#E5B028] shadow-md hover:shadow-lg active:scale-[0.98] focus:ring-2 focus:ring-[#F5BF38] focus:outline-none"
             >
               EXPLORE THE COURSES
             </a>
