@@ -12,7 +12,11 @@ RUN npm run build
 # Stage 2: Serve with lightweight Nginx
 FROM nginx:alpine AS runner
 
-COPY --from=builder /app/out /usr/share/nginx/html
+# Remove all default Nginx welcome pages and configurations
+RUN rm -rf /usr/share/nginx/html/* /etc/nginx/conf.d/*
+
+# Copy exported static files directly into Nginx web root
+COPY --from=builder /app/out/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
