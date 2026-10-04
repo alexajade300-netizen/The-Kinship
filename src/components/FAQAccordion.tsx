@@ -32,20 +32,20 @@ export function FAQAccordion({ items, defaultOpenIndex = 0 }: FAQAccordionProps)
             key={idx}
             className="border border-[#EADFD2] bg-[#FCF9F3] rounded-xl overflow-hidden transition-all duration-200"
           >
-            <h3>
+            <h3 className="font-sans m-0">
               <button
                 id={buttonId}
                 type="button"
                 onClick={() => toggle(idx)}
                 aria-expanded={isOpen}
                 aria-controls={contentId}
-                className="w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 hover:bg-[#F0E0E3]/25 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8A1F42]"
+                className="w-full px-6 py-5 sm:py-5.5 text-left flex items-center justify-between gap-4 hover:bg-[#F0E0E3]/25 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8A1F42]"
               >
-                <span className="font-serif text-base sm:text-lg font-bold text-[#251C1E]">
+                <span className="font-sans text-base sm:text-lg font-semibold text-[#251C1E] leading-snug">
                   {item.question}
                 </span>
                 <span
-                  className={`p-1 rounded-full text-[#4B0C1B] transition-transform duration-200 flex-shrink-0 ${
+                  className={`p-1.5 rounded-full text-[#4B0C1B] transition-transform duration-200 flex-shrink-0 ${
                     isOpen ? "rotate-180 bg-[#F0E0E3]" : "bg-transparent"
                   }`}
                 >
@@ -59,9 +59,9 @@ export function FAQAccordion({ items, defaultOpenIndex = 0 }: FAQAccordionProps)
                 id={contentId}
                 role="region"
                 aria-labelledby={buttonId}
-                className="px-6 pb-5 pt-1 text-sm sm:text-base text-[#6E6466] leading-relaxed border-t border-[#EADFD2]/60 bg-white"
+                className="px-6 pb-6 pt-3 text-sm sm:text-base font-sans font-normal text-[#6E6466] leading-relaxed border-t border-[#EADFD2]/60 bg-white"
               >
-                <p>{item.answer}</p>
+                <p className="font-sans text-[#6E6466] leading-relaxed font-normal">{item.answer}</p>
               </div>
             )}
           </div>

@@ -42,11 +42,11 @@ export default function FAQPage() {
             {CATEGORIZED_FAQS.map((category) => (
               <div key={category.category} className="scroll-mt-28" id={category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}>
                 <div className="flex items-center gap-2 pb-3 mb-6 border-b border-[#EADFD2]">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8A1F42]">
+                  <span className="text-xs font-sans font-semibold uppercase tracking-wider text-[#8A1F42]">
                     CATEGORY
                   </span>
                   <span className="text-[#CDAE68] font-bold">&bull;</span>
-                  <h2 className="font-serif text-2xl font-bold text-[#251C1E]">
+                  <h2 className="font-sans text-xl sm:text-2xl font-bold text-[#251C1E] tracking-normal">
                     {category.category}
                   </h2>
                 </div>
