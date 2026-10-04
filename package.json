@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build && rm -rf dist && cp -r out dist",
-    "start": "npx -y serve out -l 3000",
+    "start": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {
