@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-maroon: #4B0C1B;
+  --color-burgundy: #8A1F42;
+  --color-accent-burgundy: #971E49;
+  --color-cream: #F8F2E8;
+  --color-cream-light: #FCF9F3;
+  --color-blush: #F0E0E3;
+  --color-blush-subtle: #F9F3F4;
+  --color-gold: #CDAE68;
+  --color-text: #251C1E;
+  --color-text-muted: #6E6466;
+  --color-border: #EADFD2;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-cream);
+    color: var(--color-text);
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-text);
+    line-height: 1.65;
+    font-size: 1.0625rem; /* 17px base for comfortable reading */
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: "Newsreader", "Playfair Display", "Cormorant Garamond", "Baskerville", "Georgia", serif;
+    letter-spacing: -0.015em;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Accessibility focus ring */
+  *:focus-visible {
+    outline: 2px solid #8A1F42;
+    outline-offset: 3px;
+  }
+}
+
+/* Subtle scientific dot pattern background utility */
+.bg-dots-pattern {
+  background-image: radial-gradient(#8A1F42 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  background-position: 0 0;
+}
+
+.bg-dots-faint {
+  background-image: radial-gradient(rgba(138, 31, 66, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Accessibility: respects reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
